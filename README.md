@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+In this app, the user can add a contact by clicking on create contact button, and a pop-up will show one form, fill that form with name, last name, and status attributes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+There is a validation of attributes like u can’t post any contact without all the attributes.
 
-## Available Scripts
+On the home page (‘/’), It is a contact page, user can add the contact, and below that the list of all the contacts available.
 
-In the project directory, you can run:
+On this page,
 
-### `npm start`
+Two sections –
+-> sidebar for all the routes
+-> create contact and all contacts -
+From there, the user can view any contact data by clicking on the view button. After that user can update the contact details by clicking on the edit button and that button shows on the form, In this form the user can edit any attributes of that contact. After that there is another button which is the delete button, that button can delete the contact.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+On the second page (‘/chartsandmaps’), Is a Charts and Maps page, the user can see the total number of cases on dates, and the Map can show the data of all the countries.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+On this page,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Two sections –
+-> sidebar for all the routes
+-> Chart and Map –
+The chart can show the line graph of covid 19 active cases on the dates. For this Chart.js is used
 
-### `npm run build`
+Maps can show all countries’ names and markers. Users can see the data related to that country, On clicking on that country’s marker that indicates the country name, total number of active, recovered cases, and deaths in that particular country as a pop-up. For getting this data Maptiler is used.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+All the pages are responsive to three level screens like desktop, tabs, and mobiles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For this assignment i use teck-Stacks-
+Html, Css, Javascript, React.js,React-Router, Json-Server, Api, Chart.js, React-leaflet, and Maptiler.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the application
+Run npm install
+npm start
+open localhost:3000
+API Endpoints used
+GET requests returns historic data regarding active cases, deaths and recoveries (COVID 19)
+1. URL: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+cases:{ ['1/2/2022',89] ... } deaths:{ ['1/2/2022',89] ... } recovered:{ ['1/2/2022',89] ... }
 
-### `npm run eject`
+GET request return object containing country specific information regarding covid 19
+2. URL: https://disease.sh/v3/covid-19/countries
+[ { country:String, active:Number, deaths:Number, recovered:Number ... } ... ]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GET request return object containing world wide information regarding covid 19
+3. URL: https://disease.sh/v3/covid-19/all
+{
+    total:Number,
+    active:Number,
+    deaths:Number,
+    recovered:Number
+    ...
+}
