@@ -28,25 +28,55 @@ All the pages are responsive to three level screens like desktop, tabs, and mobi
 For this assignment i use teck-Stacks-
 Html, Css, Javascript, React.js,React-Router, Json-Server, Api, Chart.js, React-leaflet, and Maptiler.
 
-To start the application
-Run npm install
-npm start
-open localhost:3000
-API Endpoints used
-GET requests returns historic data regarding active cases, deaths and recoveries (COVID 19)
-1. URL: https://disease.sh/v3/covid-19/historical/all?lastdays=all
-cases:{ ['1/2/2022',89] ... } deaths:{ ['1/2/2022',89] ... } recovered:{ ['1/2/2022',89] ... }
+## To start the application
 
-GET request return object containing country specific information regarding covid 19
-2. URL: https://disease.sh/v3/covid-19/countries
-[ { country:String, active:Number, deaths:Number, recovered:Number ... } ... ]
+## Run npm install
 
-GET request return object containing world wide information regarding covid 19
-3. URL: https://disease.sh/v3/covid-19/all
-{
-    total:Number,
-    active:Number,
-    deaths:Number,
-    recovered:Number
+## npm start
+
+## open localhost:3000
+
+## API Endpoints used
+
+## GET requests returns historic data regarding active cases, deaths and recoveries (COVID 19)
+
+## 1. URL: https://disease.sh/v3/covid-19/historical/all?lastdays=all
+
+cases:{
+    ['1/2/2022',89] 
     ...
 }
+deaths:{
+    ['1/2/2022',89]
+    ...
+}
+recovered:{
+    ['1/2/2022',89]
+    ...
+}
+
+## GET request return object containing country specific information regarding covid 19
+
+## 2. URL: https://disease.sh/v3/covid-19/countries
+[
+    {
+        country:String,
+        active:Number,
+        deaths:Number,
+        recovered:Number
+        ...
+    }
+    ...
+]
+
+## GET request return object containing world wide information regarding covid 19
+
+## 3. URL: https://disease.sh/v3/covid-19/all
+
+    {
+        total:Number,
+        active:Number,
+        deaths:Number,
+        recovered:Number
+        ...
+    }
