@@ -25,7 +25,7 @@ Maps can show all countries’ names and markers. Users can see the data related
 
 All the pages are responsive to three level screens like desktop, tabs, and mobiles.
 
-For this assignment i use teck-Stacks-
+For this assignment the teck-Stacks used are-
 Html, Css, Javascript, React.js,React-Router, Json-Server, Api, Chart.js, React-leaflet, and Maptiler.
 
 ## To start the application
